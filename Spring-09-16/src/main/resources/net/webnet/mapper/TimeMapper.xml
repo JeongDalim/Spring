@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+"http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<mapper namespace="net.webnet.mapper.TimeMapper">
+<select id="getTime2" resultType="string"> <!--  id= 메소드 이름   resultType = 리턴타입 -->
+	select sysdate from dual  <!--  이걸 수행해라  -->
+</select>
+
+</mapper>
