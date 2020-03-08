@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE mapper
+ PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+ "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="net.websnet.mapper.GuestMapper">
+
+	<select resultType="net.websnet.domain.GuestVO" id="guestList">select * from
+		guest_tbl </select>
+
+	<insert id="guestWrite">insert into guest_tbl(idx, name,
+		subject,contents)values(guest_tbl_seq_idx.nextval,#{name},#{subject},#{contents})
+	</insert>
+
+	<select resultType="net.websnet.domain.GuestVO" id="guestView">select * from
+		guest_tbl where idx=#{idx} </select>
+
+	<update id="guestReadCnt">update guest_tbl set readcnt=readcnt+1 where
+		idx=#{idx} </update>
+
+</mapper>
